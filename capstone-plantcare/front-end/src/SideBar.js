@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BasicCard from "./BasicCard";
-import { CardMedia, Grid, Stack } from "@mui/material";
+import { CardMedia, Grid, Stack, Box } from "@mui/material";
 import Popup from "./Popup";
 
 const SideBar = props => {
@@ -9,9 +9,14 @@ const SideBar = props => {
 
     return (
       <div className={sidebarClass}>
-        <Grid container justifyContent="center">
-          <BasicCard name="Add a Plant!"/>
+        {
+        props.isOpen && 
+        <Grid  >
+          <Box sx={{width: '50%'}}>
+            <BasicCard name="Add a Plant!" addCard={props.addCard}/>
+          </Box>
         </Grid>
+        }
         <div>
           <button onClick={props.onClick} >Close Me!</button>
         </div>        
