@@ -55,14 +55,17 @@ const BasicCard = props => {
               Plant Name:
               <input type="text" onChange = {(e) => setName(e.target.value)} value={name}></input>
             </label>
+            <br></br>
             <label>
               Device ID:
               <input type="text" onChange = {(e) => setDeviceID(e.target.value)} value={deviceID}></input>
             </label>
+            <br></br>
             <label>
               Moisture Level:
               <input type="text" onChange = {(e) => setMoistureLvl(e.target.value)} value={moistureLvl}></input>
             </label>
+            <br></br>
             <button type="submit">Submit Data!</button>
             
           </form>
