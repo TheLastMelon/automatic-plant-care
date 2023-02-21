@@ -49,6 +49,7 @@ const BasicCard = props => {
           setTimesPerDay("");
           setTimesPerWeek("");
           setTimePerWatering("");
+          props.getCard();
           console.log("Plant Card Created Successfully");
         } else {
           console.log("Some error occured");
@@ -59,26 +60,6 @@ const BasicCard = props => {
 
       togglePopup();
       //props.addCard([name, deviceID, timesPerDay, timesPerWeek, timePerWatering]);
-
-
-
-      /** 
-      /** Testing to make sure the moisture level only contains numbers 
-      if(/^\d+$/.test(moistureLvl)){
-
-        // Testing our data collection by printing it to the console
-        console.log(`Form Submitted, ${name} with a required Moisture Level of ${moistureLvl}`)
-
-        //Closing the Popup upcon submition
-        togglePopup();
-
-        props.addCard([moistureLvl, name, deviceID]);
-      }else{
-
-        // The Moisture Level Contains non-digits.
-        console.log('Please Enter Only Numbers');
-      }
-      */
     }
   
     

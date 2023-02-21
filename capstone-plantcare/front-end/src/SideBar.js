@@ -13,7 +13,7 @@ const SideBar = props => {
         props.isOpen && 
         <Grid  >
           <Box sx={{width: '50%'}}>
-            <BasicCard name="Add a Plant!" addCard={props.addCard}/>
+            <BasicCard name="Add a Plant!" addCard={props.addCard} getCard={props.getCard}/>
           </Box>
         </Grid>
         }
